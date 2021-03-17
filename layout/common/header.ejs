@@ -42,7 +42,9 @@
                             <% }} %>
                         </ul>
                         <nav id="sub-nav">
+                            <% if (!theme.search.disable) { %>
                             <%- partial('search/index') %>
+                            <% } %>
                         </nav>
                     </div>
                 </div>
