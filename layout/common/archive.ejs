@@ -10,15 +10,15 @@
             <div class="archive-year-wrap">
                 <a href="<%- url_for('archives/' + year) %>" class="archive-year"><i class="icon fa fa-calendar-o"></i><%= year %></a>
             </div>
-            <div class="archives">
+            <div class="grid grid-cols-2 gap-2">
     <% } %>
     <% postCount++; %>
     <% if (postCount % 2 == 1) { %>
-        <div class="article-row">
+        <!-- <div class="article-row"> -->
     <% } %>
         <%- partial('summary', { post: post }) %>
     <% if (postCount == page.posts.length || postCount % 2 == 0) { %>
-        </div>
+        <!-- </div> -->
     <% } %>
 <% }) %>
 <% if (page.posts.length) { %>
